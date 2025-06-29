@@ -1,1 +1,1 @@
-# image--classification-model-using-a--Convolutional-Neural-Network
+# image-classification-model-using-a-Convolutional-Neural-Network
