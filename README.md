@@ -1,77 +1,56 @@
-🧠 Image Classification Model Using a Convolutional Neural Network (CNN)
+# CIFAR-10 Image Classification with CNN
 
+## Overview
+This project implements a Convolutional Neural Network (CNN) to classify images from the CIFAR-10 dataset. The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class. The 10 classes represent airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks.
 
-This project demonstrates how to build and train a Convolutional Neural Network (CNN) using TensorFlow/Keras for image classification. The model is trained on the MNIST dataset — a benchmark dataset of handwritten digits (0–9).
+## Project Structure
+- `app.py`: Main Python script containing the complete implementation
+- `Test_Accuracy.png`: Training logs showing accuracy metrics
+- `Plot.png`: Visualization of training and validation accuracy over epochs
+- `Output.png`: Sample predictions on test images
 
-🎯 Project Objective
-Build a CNN from scratch using TensorFlow/Keras
+## Key Features
+- Image preprocessing including normalization and one-hot encoding
+- CNN architecture with:
+  - Three convolutional layers with ReLU activation
+  - Two max-pooling layers
+  - Two dense layers (one hidden layer and output layer)
+- Adam optimizer with categorical cross-entropy loss
+- Training visualization showing accuracy progression
+- Model evaluation on test data
 
-Train the model on the MNIST dataset
+## Results
+The model achieved:
+- Training accuracy: 75.52%
+- Validation accuracy: 71.11%
+- Test accuracy: 71%
 
-Monitor performance (accuracy/loss)
+## How to Use
+1. Ensure you have Python installed with required libraries:
+   ```
+   pip install tensorflow matplotlib
+   ```
+2. Run the script:
+   ```
+   python app.py
+   ```
+3. The script will:
+   - Download and preprocess the CIFAR-10 dataset
+   - Train the CNN model for 10 epochs
+   - Display sample images with their labels
+   - Show accuracy plots during training
+   - Save the trained model as `cnn_cifar10_model.h5`
 
-Evaluate the model on test data
+## Sample Output
+The script displays sample images from the dataset with their correct labels (as shown in Output.png) and plots the training progress, showing how accuracy improves over epochs.
 
-Visualize training progress
+## Future Improvements
+- Experiment with deeper network architectures
+- Try different regularization techniques (dropout, batch normalization)
+- Implement data augmentation to improve generalization
+- Fine-tune hyperparameters for better performance
 
-🛠️ Technologies Used
-Python 3
-
-TensorFlow / Keras
-
-NumPy
-
-Matplotlib
-
-📁 Dataset
-MNIST: 60,000 training images and 10,000 test images of handwritten digits (28x28 grayscale)
-
-Automatically downloaded via tensorflow.keras.datasets
-
-🚀 How to Run
-Clone this repository
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/Image-Classification-model-using-a-Convolutional-Neural-Network-CNN--main.git
-
-cd Image-Classification-model-using-a-Convolutional-Neural-Network-CNN--main
-
-
-
-Install dependencies
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the app
-
-bash
-Copy
-Edit
-python app.py
-
-
-
-📊 Output
-Model achieves ~98% test accuracy on MNIST
-
-Training and validation accuracy graphs plotted using Matplotlib
-
-![Screenshot 113421](https://github.com/user-attachments/assets/1fca6431-de81-4b87-8a71-06b2bcf1f44e)
-
-![Screenshot 113213](https://github.com/user-attachments/assets/c6492998-6b39-4715-b6ad-4d42377e3c0f)
-
-
-
-✅ Features
-End-to-end CNN training pipeline
-
-Clean modular code (data loading, model building, training, evaluation)
-
-Lightweight and easy to extend to other datasets (e.g., CIFAR-10)
-
-📌 Author
-Developed by [S VENKATESH] – as part of a machine learning image classification task using deep learning.
+## Dependencies
+- TensorFlow 2.x
+- Matplotlib
+- NumPy
